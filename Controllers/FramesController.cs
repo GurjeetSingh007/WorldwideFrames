@@ -20,9 +20,16 @@ namespace WorldwideFrames.Controllers
         }
 
         // GET: Frames
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Frame.ToListAsync());
+            var frames = from f in _context.Frame
+                 select f;
+
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        frames = frames.Where(s => s.FrameType.Contains(searchString));
+    }
+            return View(await frames.ToListAsync());
         }
 
         // GET: Frames/Details/5
