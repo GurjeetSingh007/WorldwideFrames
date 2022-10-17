@@ -29,7 +29,8 @@ namespace WorldwideFrames.Models
                         Color = "Off White",
                         FrameHeight = 13.2M,
                         FrameWidth = 8.1M,
-                        FramePrice = 9.4M
+                        FramePrice = 9.4M,
+                        Rating = 4.2M
                     },
                     new Frame
                     {
@@ -38,7 +39,8 @@ namespace WorldwideFrames.Models
                         Color = "Silver",
                         FrameHeight = 18,
                         FrameWidth = 12,
-                        FramePrice = 26
+                        FramePrice = 26,
+                        Rating = 4.6M
                     },
                     new Frame
                     {
@@ -47,7 +49,8 @@ namespace WorldwideFrames.Models
                         Color = "Green",
                         FrameHeight = 12.3M,
                         FrameWidth = 6.9M,
-                        FramePrice = 8.3M
+                        FramePrice = 8.3M,
+                        Rating = 3.9M
                     },
                     new Frame
                     {
@@ -56,7 +59,8 @@ namespace WorldwideFrames.Models
                         Color = "Grey",
                         FrameHeight = 12.9M,
                         FrameWidth = 7M,
-                        FramePrice = 11
+                        FramePrice = 11,
+                        Rating = 4.1M
                     },
                     new Frame
                     {
@@ -65,7 +69,8 @@ namespace WorldwideFrames.Models
                         Color = "Black",
                         FrameHeight = 9.99M,
                         FrameWidth = 5.2M,
-                        FramePrice = 12
+                        FramePrice = 12,
+                        Rating = 4.9M
                     },
                     new Frame
                     {
@@ -74,7 +79,8 @@ namespace WorldwideFrames.Models
                         Color = "light Red",
                         FrameHeight = 14,
                         FrameWidth = 11,
-                        FramePrice = 15
+                        FramePrice = 15,
+                        Rating = 4M
                     },
                     new Frame
                     {
@@ -83,7 +89,8 @@ namespace WorldwideFrames.Models
                         Color = "LightBlack",
                         FrameHeight = 15,
                         FrameWidth = 12,
-                        FramePrice = 17.5M
+                        FramePrice = 17.5M,
+                        Rating = 4.7M
                     },
                     new Frame
                     {
@@ -92,7 +99,8 @@ namespace WorldwideFrames.Models
                         Color = "Brown",
                         FrameHeight = 18M,
                         FrameWidth = 11M,
-                        FramePrice = 32.99M
+                        FramePrice = 32.99M,
+                        Rating = 3.5M
                     },
                     new Frame
                     {
@@ -101,7 +109,8 @@ namespace WorldwideFrames.Models
                         Color = "White",
                         FrameHeight = 12.99M,
                         FrameWidth = 8.9M,
-                        FramePrice = 16.4M
+                        FramePrice = 16.4M,
+                        Rating = 4.4M
                     },
                     new Frame
                     {
@@ -110,7 +119,8 @@ namespace WorldwideFrames.Models
                         Color = "Cream",
                         FrameHeight = 15M,
                         FrameWidth = 12.2M,
-                        FramePrice = 29.7M
+                        FramePrice = 29.7M,
+                        Rating = 4.2M
                     }
                 );
                 context.SaveChanges();

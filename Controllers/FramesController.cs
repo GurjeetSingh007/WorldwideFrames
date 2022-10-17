@@ -61,7 +61,7 @@ namespace WorldwideFrames.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FrameType,FrameStyle,Color,FrameHeight,FrameWidth,FramePrice")] Frame frame)
+        public async Task<IActionResult> Create([Bind("Id,FrameType,FrameStyle,Color,FrameHeight,FrameWidth,FramePrice,Rating")] Frame frame)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace WorldwideFrames.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FrameType,FrameStyle,Color,FrameHeight,FrameWidth,FramePrice")] Frame frame)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FrameType,FrameStyle,Color,FrameHeight,FrameWidth,FramePrice,Rating")] Frame frame)
         {
             if (id != frame.Id)
             {

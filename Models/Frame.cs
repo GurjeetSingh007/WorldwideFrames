@@ -20,5 +20,8 @@ namespace WorldwideFrames.Models
 
         [Column(TypeName = "decimal(6, 2)")]
         public decimal FramePrice { get; set; }
+
+        [Column(TypeName = "decimal(2, 1)")]
+        public decimal Rating { get; set; }
     }
 }
