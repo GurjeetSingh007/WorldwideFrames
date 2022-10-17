@@ -20,16 +20,31 @@ namespace WorldwideFrames.Controllers
         }
 
         // GET: Frames
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string frameColor, string searchString)
         {
+            IQueryable<string> colorQuery = from f in _context.Frame
+                                            orderby f.Color
+                                            select f.Color;
+
             var frames = from f in _context.Frame
                  select f;
 
-    if (!String.IsNullOrEmpty(searchString))
-    {
-        frames = frames.Where(s => s.FrameType.Contains(searchString));
-    }
-            return View(await frames.ToListAsync());
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                frames = frames.Where(s => s.FrameType.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(frameColor))
+            {
+                frames = frames.Where(x => x.Color == frameColor);
+            }
+
+            var movieGenreVM = new FrameColorViewModel
+            {
+                Colors = new SelectList(await colorQuery.Distinct().ToListAsync()),
+                Frames = await frames.ToListAsync()
+            };
+            return View(movieGenreVM);
         }
 
         // GET: Frames/Details/5
