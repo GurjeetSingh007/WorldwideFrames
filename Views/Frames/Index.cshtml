@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WorldwideFrames.Models.Frame>
+﻿@model WorldwideFrames.Models.FrameColorViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -10,6 +10,9 @@
     <a asp-action="Create">Create New</a>
     <form asp-controller="Frames" asp-action="Index">
         <p>
+            <select asp-for="FrameColor" asp-items="Model.Colors">
+                <option value="">All</option>
+            </select>
             Frame Type <input type="text" name="SearchString" />
             <input type="submit" value="Filter" />
         </p>
@@ -19,30 +22,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FrameType)
+                @Html.DisplayNameFor(model => model.Frames[0].FrameType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FrameStyle)
+                @Html.DisplayNameFor(model => model.Frames[0].FrameStyle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Color)
+                @Html.DisplayNameFor(model => model.Frames[0].Color)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FrameHeight)
+                @Html.DisplayNameFor(model => model.Frames[0].FrameHeight)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FrameWidth)
+                @Html.DisplayNameFor(model => model.Frames[0].FrameWidth)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FramePrice)
+                @Html.DisplayNameFor(model => model.Frames[0].FramePrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rating)
+                @Html.DisplayNameFor(model => model.Frames[0].Rating)
             </th>
             <th></th>
         </tr>    </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model.Frames)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FrameType)
