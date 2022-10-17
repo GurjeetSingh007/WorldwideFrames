@@ -4,19 +4,18 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Frame</h4>
+<h1 class="text-center">Create Frame</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 m-auto text-center">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FrameType" class="control-label"></label>
                 <input asp-for="FrameType" class="form-control" />
                 <span asp-validation-for="FrameType" class="text-danger"></span>
-            </div>
+            </div> 
+            
             <div class="form-group">
                 <label asp-for="FrameStyle" class="control-label"></label>
                 <input asp-for="FrameStyle" class="form-control" />
