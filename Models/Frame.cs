@@ -19,6 +19,7 @@ namespace WorldwideFrames.Models
         public decimal FrameWidth { get; set; }
 
         [Column(TypeName = "decimal(6, 2)")]
+        [DataType(DataType.Currency)]
         public decimal FramePrice { get; set; }
 
         [Column(TypeName = "decimal(2, 1)")]
